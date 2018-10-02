@@ -39,7 +39,7 @@ This document contains functional and non-functional requirements for the mobile
 ### 1.2\. Business requirements<a name = "1.2"></a>
 
 #### 1.2.1\. Initial data <a name = "1.2.1"></a>
-Modern IT technologies are making their way into all areas of human life. Maintaining electronic medical records is especially popular, since it saves patients from excessive bureaucracy with paper-based documents. It is also convenient for doctors, who at any time can get information about the medical history of patient. But not all electronic media have information about the health of the patient's teeth and peoples must use paper-based documents.
+Modern IT technologies are making their way into all areas of human life. Maintaining electronic medical records is especially popular, since it saves patients from excessive bureaucracy with paper-based documents. It is also convenient for doctors, who at any time can get information about the medical history of patient. But not all electronic media have information about the health of the patient's teeth and people must use paper-based documents.
 
 #### 1.2.2\. Business opportunities <a name = "1.2.2"></a>
 Many people want an application that will allow you to store your health data electronically, with minimal technical literacy. Such application will allow them to spend less time searching for necessary information about their health. This will also allow doctors to spend less time for collecting information about the patient. The designed user interface should allow the application to be used by people with minimal technical knowledge.
@@ -138,8 +138,8 @@ Figure 6. Dental data screen (continuation)<br>
 #### 2.3.2\. Application Audience <a name="2.3.2"></a>
 People of middle age category with a basic and higher education level, who have minimal technical literacy.
 ### 2.4\. Assumptions and Dependencies <a name="2.4"></a>
-1. The application will not work without authorization in iOS system;
-2. The application will not work without access rights to health information in the system;
+1. The application requires authorization in iOS system;
+2. The application requires access rights to health information in the system;
 3. The application will work without network conntection.
 
 ## 3\. System Requirements <a name="3"></a>
@@ -202,7 +202,6 @@ Application screens should be convenient for use by users with poor eyesight:
 - functional elements are contrast to the screen background.
 
 #### 3.2.3\. Constraints<a name = "3.2.3"></a>
-1. Application is created for iOS 12 system;<br>
-2. User medical data is stored in a JSON file.
+1. Application is created for iOS 12 system<br>
 
 
