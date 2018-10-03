@@ -42,7 +42,7 @@ This document contains functional and non-functional requirements for the mobile
 Modern IT technologies are making their way into all areas of human life. Maintaining electronic medical records is especially popular, since it saves patients from excessive bureaucracy with paper-based documents. It is also convenient for doctors, who at any time can get information about the medical history of patient. But not all electronic media have information about the health of the patient's teeth and people must use paper-based documents.
 
 #### 1.2.2\. Business opportunities <a name = "1.2.2"></a>
-Many people want an application that will allow you to store your health data electronically, with minimal technical literacy. Such application will allow them to spend less time searching for necessary information about their health. This will also allow doctors to spend less time for collecting information about the patient. The designed user interface should allow the application to be used by people with minimal technical knowledge.
+Many people want an application that will allow to store health data electronically, with minimal technical literacy. Such application will allow them to spend less time searching for necessary information about their health. This will also allow doctors to spend less time for collecting information about the patient. The designed user interface should allow the application to be used by people with minimal technical knowledge.
 
 ### 1.3\. Analogues<a name = "1.3"></a>
 Main difference from analogues – storage of medical history and tooth chart in one application. <br>
@@ -144,39 +144,39 @@ Application requires basic technical skills of using an iPhone.
 #### 3.1.1\. Basic functionality <a name="3.1.1"></a>
 
 ##### 3.1.1.1\. User logon to the application <a name="3.1.1.1"></a>
-<b>Description: </b> The user has the opportunity to use the application without creating his / her own profile by logging into his / her account in the iOS system.
+<b>Description: </b> The user has the ability to use the application without creating his / her own profile by logging into his / her account in the iOS system.
 
 Function | Requirements
 | :--- | :--- 
 User logon | The application should allow the user to log in by receiving information from the iOS system
 
 ##### 3.1.1.2\. Access to medical data <a name="3.1.1.2"></a>
-<b>Description: </b> The user has the opportunity to allow / deny application access for collecting medical data from iOS system.
+<b>Description: </b> The user has the ability to allow / deny application access for collecting medical data from iOS system.
 
 Function | Requirements
 | :--- | :---
 Access to medical data | The application should allow the user to authorize / prohibit collecting medical information from the iOS system
 
 ##### 3.1.1.3\. Adding medical information <a name="3.1.1.3"></a>
-<b>Description: </b> The user has the opportunity to add medical information in the application.
+<b>Description: </b> The user has the ability to add medical information in the application.
 
 Function | Requirements
 | :--- | :---
 Adding medical information | The application should allow the user to authorize / prohibit collecting medical information from the iOS system
 
 ##### 3.1.1.4\. Deleting medical information <a name="3.1.1.4"></a>
-<b>Description: </b> The user has the opportunity to delete inputed medical information in the application.
+<b>Description: </b> The user has the ability to delete entered medical information in the application.
 
 Function | Requirements
 | :--- | :---
-Deleting medical information | The application should allow the user to delete inputed medical information 
+Deleting medical information | The application should allow the user to delete entered medical information 
 
 ##### 3.1.1.5\. Editing basic medical information <a name="3.1.1.5"></a>
-<b>Description: </b> The user has the opportunity to edit basic medical data in the iOS system.
+<b>Description: </b> The user has the ability to edit basic medical data in the iOS system 
 
 Function | Requirements
 | :--- | :---
-Editing basic medical information | The application should allow the user to edit medical information in the iOS system
+Editing basic medical information | The application should allow the user to edit medical information in the iOS by opening the system application Health
 
 #### 3.1.2\. Limitations and Exceptions <a name="3.1.2"></a>
 1. Application works without network connection;
@@ -189,7 +189,7 @@ Editing basic medical information | The application should allow the user to edi
 2. All functional elements of the user interface have names describing the action that the element does.
 
 ##### 3.2.1.2 Security<a name = "3.2.1.2"></a>
-Application allow to interrupt with medical information after authorization in iOS system using Apple ID.
+Application allow to interract with medical information after authorization in iOS system using Apple ID.
 
 #### 3.2.2\. External Interfaces <a name = "3.2.2"></a>
 Application screens should be convenient for use by users with poor eyesight:
