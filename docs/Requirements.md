@@ -12,8 +12,8 @@
 	2.1. [Software Interfaces](#2.1) <br>
   	2.2. [User Interfaces](#2.2) <br>
   	2.3. [User Characteristics](#2.3) <br>
-  		2.3.1. [User Classes](#2.3.1) <br>
-  		2.3.2. [Application Audience](#2.3.2)<br>
+  		2.3.1. [Target Audience](#2.3.1) <br>
+  		2.3.2. [Required Experience](#2.3.2)<br>
   	2.4. [Assumptions and Dependencies](#2.4) <br>
 3. [System Requirements](#3.) <br>
   	3.1. [Functional Requirements](#3.1) <br>
@@ -129,14 +129,10 @@ Figure 6. Dental data screen (continuation)<br>
 </p>
 
 ### 2.3\. User Characteristics <a name="2.3"></a>
-#### 2.3.1\. User Classes <a name="2.3.1"></a>
-| User class | Description |
-|:---|:---|
-| Registered users | Users who are logged in iOS system using their Apple ID, have access to full functionality of the application|
-| Anonymous users | Users who are not logged in iOS system. Don't have access to the functionality of the application|
-
-#### 2.3.2\. Application Audience <a name="2.3.2"></a>
-People of middle age category with a basic and higher education level, who have minimal technical literacy.
+#### 2.3.1\. Target Audience <a name="2.3.1"></a>
+People who care about the health of their oral cavity at the age of 13 years and more (requirement when [registering Apple ID](https://support.apple.com/en-us/HT203993)).
+#### 2.3.2\. Required Experience <a name="2.3.2"></a>
+Application requires basic technical skills of using an iPhone.
 ### 2.4\. Assumptions and Dependencies <a name="2.4"></a>
 1. The application requires authorization in iOS system;
 2. The application requires access rights to health information in the system;
