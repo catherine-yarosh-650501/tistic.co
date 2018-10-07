@@ -162,7 +162,7 @@ Access to medical data | The application should allow the user to authorize / pr
 
 Function | Requirements
 | :--- | :---
-Adding medical information | The application should allow the user to authorize / prohibit collecting medical information from the iOS system
+Adding medical information | The application should allow the user to add medical information
 
 ##### 3.1.1.4\. Deleting medical information <a name="3.1.1.4"></a>
 <b>Description: </b> The user has the ability to delete entered medical information in the application.
