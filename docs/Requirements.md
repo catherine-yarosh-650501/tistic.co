@@ -23,7 +23,7 @@
   			3.1.1.3. [Adding medical information](#3.1.1.3)<br>
   			3.1.1.4. [Deleting medical information](#3.1.1.4)<br>
   			3.1.1.5. [Editing basic medical information](#3.1.1.5)<br>
-  		3.1.2. [Limitations and Exceptions]()<br>
+  		3.1.2. [Limitations and Exceptions](#3.1.2)<br>
   	3.2. [Non-Functional Requierements](#3.2) <br>
    		3.2.1. [Software Quality Attributes](#3.2.1) <br>
     		3.2.1.1. [Usability](#3.2.1.1) <br>
