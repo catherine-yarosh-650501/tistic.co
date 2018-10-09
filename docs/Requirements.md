@@ -130,7 +130,7 @@ Figure 6. Dental data screen (continuation)<br>
 
 ### 2.3\. User Characteristics <a name="2.3"></a>
 #### 2.3.1\. Target Audience <a name="2.3.1"></a>
-People who care about the health of their oral cavity at the age of 13 and older (requirement when [registering Apple ID](https://support.apple.com/en-us/HT203993)).
+People who care about the health of their oral cavity at the age from 13 and older (requirement when [registering Apple ID](https://support.apple.com/en-us/HT203993)).
 #### 2.3.2\. Required Experience <a name="2.3.2"></a>
 Application requires basic technical skills of using an iPhone.
 ### 2.4\. Assumptions and Dependencies <a name="2.4"></a>
