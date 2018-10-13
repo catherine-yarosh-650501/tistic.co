@@ -8,7 +8,7 @@ Platform: iOS 11.3+ <br>
 
 # Repository contents:
 1 [Documentation](docs)<br>
-1.1 [Requirements](docs/Requirements.md)<br>
+1.1 [Requirements](docs/requirements/Requirements.md)<br>
 
 
 
