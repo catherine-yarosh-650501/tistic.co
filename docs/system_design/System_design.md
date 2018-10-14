@@ -25,12 +25,12 @@ Activity Diagram is represented [here](Activity_diagrams/Activity.md)
 # 2\. Use Case Diagram  <a name = "2"></a>
 
 ![Use](Use_case_diagram/use__tistic.co.png)
-## 2.1\. Actors <br>
+## 2.1\. Actors  <a name = "2.1"></a><br>
 Actor | Description
 | :-- | :--
 User | Human that use this application
 
-## 2.2\. Use Cases <br>
+## 2.2\. Use Cases  <a name = "2.2"></a><br>
 ### 2.2.1\. User logon <a name = "2.2.1"></a>
 <b>Description:</b> Use Case "User logon" allows user to log in iOS system.
 <b>Preconditions:</b> User opened the application.<br>

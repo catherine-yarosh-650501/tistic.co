@@ -4,10 +4,10 @@
 
 
 Language: Swift 4.2 <br>
-Platform: iOS 11.3+ <br>
+Platform: iOS 12 <br>
 
 # Repository contents:
-1 [Documentation](docs)<br>
+1. [Documentation](docs)<br>
 1.1 [Requirements](docs/requirements/Requirements.md)<br>
 1.2 [System design](docs/system_design/System_design.md)
 

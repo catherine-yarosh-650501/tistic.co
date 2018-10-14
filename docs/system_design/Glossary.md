@@ -7,5 +7,5 @@ Basic medical information | Information that provided by system application "Hea
 Dental information | Information about teeth like: number of tooth and description of damage
 Tab | Element of UI like a classic button. Used to change screens of the application.
 
-
+Back to [system design](System_design.md) document.
 
