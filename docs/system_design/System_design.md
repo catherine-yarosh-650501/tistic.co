@@ -1,5 +1,7 @@
 #System design (UML)
 
+####[Glossary](Glossary.md)
+
 ###1\. [Activity Diagram](#1)<br>
 ###2\. [Use Case Diagram](#2)<br>
 ####2.1\. [Actors](#2.1)<br>
@@ -15,6 +17,7 @@
 ###5. [Class Diagram](#5)<br>
 ###6. [Component Diagram](#6)<br>
 ###7. [Deployment Diagram](#7)<br>
+
 
 
 #1\. Activity Diagram <a name = "1"></a>
@@ -73,7 +76,7 @@ User | Human that use this application
 5. Application opens system aplication "Health"; <br>
 6. User edit basic information and comes back to the application;<br>
 7. Application save changes; <br>
-6. End.<br>
+8. End.<br>
 #3\. Sequence Diagram <a name = "3"></a>
 The sequence diagram of the main use case:
 
