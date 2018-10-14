@@ -2,21 +2,21 @@
 
 ####[Glossary](Glossary.md)
 
-###1\. [Activity Diagram](#1)<br>
-###2\. [Use Case Diagram](#2)<br>
-####2.1\. [Actors](#2.1)<br>
-####2.2\. [Use Cases](#2.2)<br>
-#####2.2.1\. [User logon](#2.2.1)<br>
-#####2.2.2\. [Access to medical data](#2.2.2)<br>
-#####2.2.3\. [Add medical information](#2.2.3)<br>
-#####2.2.4\. [Delete medical information](#2.2.4)<br>
-#####2.2.5\. [Edit basic medical information](#2.2.5)<br>
+### 1\. [Activity Diagram](#1)<br>
+### 2\. [Use Case Diagram](#2)<br>
+#### 2.1\. [Actors](#2.1)<br>
+#### 2.2\. [Use Cases](#2.2)<br>
+##### 2.2.1\. [User logon](#2.2.1)<br>
+##### 2.2.2\. [Access to medical data](#2.2.2)<br>
+##### 2.2.3\. [Add medical information](#2.2.3)<br>
+##### 2.2.4\. [Delete medical information](#2.2.4)<br>
+##### 2.2.5\. [Edit basic medical information](#2.2.5)<br>
 
-###3. [Sequence Diagram](#3)<br>
-###4. [State Machine Diagram](#4)<br>
-###5. [Class Diagram](#5)<br>
-###6. [Component Diagram](#6)<br>
-###7. [Deployment Diagram](#7)<br>
+### 3\. [Sequence Diagram](#3)<br>
+### 4\. [State Machine Diagram](#4)<br>
+### 5\. [Class Diagram](#5)<br>
+### 6\. [Component Diagram](#6)<br>
+### 7\. [Deployment Diagram](#7)<br>
 
 
 
@@ -39,9 +39,10 @@ User | Human that use this application
 1. Application checks logon in iOS system;<br>
 2. If user is logged in, go to step 4;<br>
 3. Application opens system application "Settings";<br>
-4. End.
+4. End. <br>
 
 ###2.2.2\. Access to medical data <a name = "2.2.2"></a>
+
 <b>Description:</b> Use case "Access to medical data" allows user to provide access to medical data from iOS system to the application.
 <b>Preconditions:</b> User opened the application for the first time.<br>
 <b>Flow of events:</b> <br>
@@ -49,7 +50,9 @@ User | Human that use this application
 2. User press button "Don't allow", go to step 4;<br>
 3. Application retrieves medical information from the system;<br>
 4. End.<br>
+5. 
 ###2.2.3\. Add medical information <a name = "2.2.3"></a>
+
 <b>Description:</b> Use case "Add medical information" allows user to add medical data of didseases, allergy, medicaments or teeth.<br>
 <b>Flow of events:</b> <br>
 1. User press button "Edit";<br>
@@ -59,6 +62,7 @@ User | Human that use this application
 5. Application save changes; <br>
 6. End.<br>
 ###2.2.4\. Delete medical information <a name = "2.2.4"></a>
+
 <b>Description:</b> Use case "Delete medical information" allows user to delete medical data of teeth.<br>
 <b>Flow of events:</b> <br>
 1. User press button "Edit";<br>
@@ -67,6 +71,7 @@ User | Human that use this application
 4. User press button "Save"; <br>
 5. Application save changes; <br>
 6. End.<br>
+
 ###2.2.5\. Edit basic medical information <a name = "2.2.5"></a>
 <b>Description:</b> Use case "Edit basic medical information" allows user to edit medical data of basic medical information.<br>
 <b>Flow of events:</b> <br>
@@ -77,6 +82,7 @@ User | Human that use this application
 6. User edit basic information and comes back to the application;<br>
 7. Application save changes; <br>
 8. End.<br>
+
 #3\. Sequence Diagram <a name = "3"></a>
 The sequence diagram of the main use case:
 
