@@ -2,21 +2,20 @@
 
 #### [Glossary](Glossary.md)
 
-### 1\. [Activity Diagram](#1)<br>
-### 2\. [Use Case Diagram](#2)<br>
-#### 2.1\. [Actors](#2.1)<br>
-#### 2.2\. [Use Cases](#2.2)<br>
-##### 2.2.1\. [User logon](#2.2.1)<br>
-##### 2.2.2\. [Access to medical data](#2.2.2)<br>
-##### 2.2.3\. [Add medical information](#2.2.3)<br>
-##### 2.2.4\. [Delete medical information](#2.2.4)<br>
-##### 2.2.5\. [Edit basic medical information](#2.2.5)<br>
-
-### 3\. [Sequence Diagram](#3)<br>
-### 4\. [State Machine Diagram](#4)<br>
-### 5\. [Class Diagram](#5)<br>
-### 6\. [Component Diagram](#6)<br>
-### 7\. [Deployment Diagram](#7)<br>
+1. [Activity Diagram](#1)<br>
+2. [Use Case Diagram](#2)<br>
+2.1. [Actors](#2.1)<br>
+2.2. [Use Cases](#2.2)<br>
+2.2.1. [User logon](#2.2.1)<br>
+2.2.2. [Access to medical data](#2.2.2)<br>
+2.2.3. [Add medical information](#2.2.3)<br>
+2.2.4. [Delete medical information](#2.2.4)<br>
+2.2.5. [Edit basic medical information](#2.2.5)<br>
+3. [Sequence Diagram](#3)<br>
+4. [State Machine Diagram](#4)<br>
+5. [Class Diagram](#5)<br>
+6. [Component Diagram](#6)<br>
+7. [Deployment Diagram](#7)<br>
 
 
 
@@ -50,7 +49,7 @@ User | Human that use this application
 2. User press button "Don't allow", go to step 4;<br>
 3. Application retrieves medical information from the system;<br>
 4. End.<br>
-5. 
+
 ### 2.2.3\. Add medical information <a name = "2.2.3"></a>
 
 <b>Description:</b> Use case "Add medical information" allows user to add medical data of didseases, allergy, medicaments or teeth.<br>
@@ -84,7 +83,9 @@ User | Human that use this application
 8. End.<br>
 
 # 3\. Sequence Diagram <a name = "3"></a>
+
 The sequence diagram of the main use case:
+![Sequence](Sequence_diagram/Sequence_diagram.png)
 
 # 4\. State Machine Diagram<a name = "4"></a>
 
