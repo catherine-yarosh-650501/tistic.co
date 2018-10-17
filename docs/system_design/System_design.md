@@ -15,8 +15,6 @@
 4. [State Machine Diagram](#4)<br>
 5. [Class Diagram](#5)<br>
 6. [Component Diagram](#6)<br>
-7. [Deployment Diagram](#7)<br>
-
 
 
 # 1\. Activity Diagram <a name = "1"></a>
@@ -88,10 +86,10 @@ The sequence diagram of the main use case:
 ![Sequence](Sequence_diagram/Sequence_diagram.png)
 
 # 4\. State Machine Diagram<a name = "4"></a>
+![State](State_maschine_diagram/State_maschine_diagram.png)
 
 # 5\. Class Diagram <a name = "5"></a>
 ![Class](Class_diagram/Class_diagram.png)
 
-# 6\. Component Diagram <a name = "6"></a>
-
-# 7\. Deployment Diagram <a name = "7"></a>
+# 6\. Component and Deployment Diagram <a name = "6"></a>
+![Component_deployment](Component_and_Deployment_diagrams/Component_and_Deployment_diagram.png)

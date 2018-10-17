@@ -80,7 +80,7 @@ Application uses [HealthKit framework](https://developer.apple.com/healthkit/), 
 Graphical user interface is represented by mockup images.
 
 <p align = "center">
-<img width = "282" height = "573" src = "https://github.com/greadvx/tistic.co/blob/master/docs/mockups/tistic-co_Icon.png?raw=true">
+<img width = "282" height = "573" src = "https://github.com/greadvx/tistic.co/blob/master/docs/requirements/mockups/tistic-co_Icon.png?raw=true">
 </p>
 
 <p align = "center">
@@ -88,7 +88,7 @@ Figure 1. Icon Image of the application<br>
 </p>
 
 <p align = "center">
-<img width = "282" height = "573" src="https://github.com/greadvx/tistic.co/blob/master/docs/mockups/tistic-co_Startup.png?raw=true">
+<img width = "282" height = "573" src="https://github.com/greadvx/tistic.co/blob/master/docs/requirements/mockups/tistic-co_Startup.png?raw=true">
 </p>
 
 <p align = "center">
@@ -97,7 +97,7 @@ Figure 2. Startup screen of the application<br>
 
 
 <p align = "center">
-<img width = "282" height = "573" src="https://github.com/greadvx/tistic.co/blob/master/docs/mockups/tistic-co_Startup_access.png?raw=true">
+<img width = "282" height = "573" src="https://github.com/greadvx/tistic.co/blob/master/docs/requirements/mockups/tistic-co_Startup_access.png?raw=true">
 </p>
 
 <p align = "center">
@@ -105,7 +105,7 @@ Figure 3. Allow access medical data<br>
 </p>
 
 <p align = "center">
-<img width = "282" height = "573" src="https://github.com/greadvx/tistic.co/blob/master/docs/mockups/tistic-co_Medical_data.png?raw=true">
+<img width = "282" height = "573" src="https://github.com/greadvx/tistic.co/blob/master/docs/requirements/mockups/tistic-co_Medical_data.png?raw=true">
 </p>
 
 <p align = "center">
@@ -113,7 +113,7 @@ Figure 4. Medical data screen<br>
 </p>
 
 <p align = "center">
-<img width = "282" height = "573" src="https://github.com/greadvx/tistic.co/blob/master/docs/mockups/tistic-co_Dental_data-1.png?raw=true">
+<img width = "282" height = "573" src="https://github.com/greadvx/tistic.co/blob/master/docs/requirements/mockups/tistic-co_Dental_data-1.png?raw=true">
 </p>
 
 <p align = "center">
@@ -121,7 +121,7 @@ Figure 5. Dental data screen<br>
 </p>
 
 <p align = "center">
-<img width = "282" height = "573" src="https://github.com/greadvx/tistic.co/blob/master/docs/mockups/tistic-co_Dental_data-2.png?raw=true">
+<img width = "282" height = "573" src="https://github.com/greadvx/tistic.co/blob/master/docs/requirements/mockups/tistic-co_Dental_data-2.png?raw=true">
 </p>
 
 <p align = "center">
