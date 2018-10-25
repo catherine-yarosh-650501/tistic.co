@@ -92,4 +92,4 @@ The sequence diagram of the main use case:
 ![Class](Class_diagram/Class_diagram.png)
 
 # 6\. Component and Deployment Diagram <a name = "6"></a>
-![Component_deployment](Component_and_Deployment_diagrams/Component_and_Deployment_diagram.png)
+![Component_deployment](Component_and_Deployment_diagrams/Component_and_Deployment_diagrams.png)
