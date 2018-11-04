@@ -24,18 +24,18 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="caring for your teeth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zh-tZ-aHz">
-                                <rect key="frame" x="140" y="606" width="134" height="20"/>
+                                <rect key="frame" x="60" y="606" width="294" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="2zh-tZ-aHz" secondAttribute="height" multiplier="67:10" id="wAN-ds-hyA"/>
+                                    <constraint firstAttribute="width" secondItem="2zh-tZ-aHz" secondAttribute="height" multiplier="183:31" id="6gK-p2-PjS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tistic.co" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owX-zz-Wcw">
-                                <rect key="frame" x="81" y="508" width="252" height="71"/>
+                                <rect key="frame" x="60" y="508" width="294" height="75.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="owX-zz-Wcw" secondAttribute="height" multiplier="252:71" id="aJf-hZ-d1H"/>
+                                    <constraint firstAttribute="width" secondItem="owX-zz-Wcw" secondAttribute="height" multiplier="276:71" id="hZw-V9-t5T"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="77"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -44,15 +44,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.47450980390000003" green="0.69019607839999997" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="owX-zz-Wcw" secondAttribute="trailing" constant="81" id="23c-3N-ACd"/>
-                            <constraint firstItem="2zh-tZ-aHz" firstAttribute="top" secondItem="owX-zz-Wcw" secondAttribute="bottom" constant="27" id="2Fm-h2-m79"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="owX-zz-Wcw" secondAttribute="trailing" constant="60" id="1xY-Xo-KKo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2zh-tZ-aHz" secondAttribute="trailing" constant="60" id="7IE-zP-Za8"/>
+                            <constraint firstItem="owX-zz-Wcw" firstAttribute="top" secondItem="Pu4-hC-Mfw" secondAttribute="bottom" constant="64" id="JUk-2a-3GB"/>
                             <constraint firstItem="Pu4-hC-Mfw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="NbD-GL-DPw"/>
                             <constraint firstItem="Pu4-hC-Mfw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="125" id="P6F-r3-eiL"/>
-                            <constraint firstItem="owX-zz-Wcw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="81" id="iba-2i-DGP"/>
-                            <constraint firstItem="2zh-tZ-aHz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="id8-bg-qkx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2zh-tZ-aHz" secondAttribute="trailing" constant="140" id="mZ3-hx-Zeg"/>
+                            <constraint firstItem="owX-zz-Wcw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="gSf-zX-fWZ"/>
+                            <constraint firstItem="2zh-tZ-aHz" firstAttribute="top" secondItem="owX-zz-Wcw" secondAttribute="bottom" constant="22.5" id="jd3-al-Dfo"/>
+                            <constraint firstItem="2zh-tZ-aHz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="sqs-nM-ea8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pu4-hC-Mfw" secondAttribute="trailing" constant="87" id="vkI-C0-YXa"/>
-                            <constraint firstItem="owX-zz-Wcw" firstAttribute="top" secondItem="Pu4-hC-Mfw" secondAttribute="bottom" constant="64" id="xDF-yq-iJ7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
