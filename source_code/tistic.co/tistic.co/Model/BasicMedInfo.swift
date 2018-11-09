@@ -20,8 +20,6 @@ public class BasicMedInfo: Codable {
     private var sex: String
     
     init() {
-        //Storage file existance
-        //Storage retrieve()
         self.diseases = "none"
         self.allergy = "none"
         self.medicaments = "none"
@@ -39,43 +37,49 @@ public class BasicMedInfo: Codable {
             print(error)
         }
     }
+    
     func setDiseases(text: String) {
         self.diseases = text
-        //TODO - save model into file
     }
+    
     func getDiseases() -> String {
         return self.diseases
     }
+    
     func setAllergy(text: String) {
         self.allergy = text
-        //TODO - save model into file
     }
+    
     func getAllergy() -> String {
         return self.allergy
     }
+    
     func setMedicaments(text: String) {
         self.medicaments = text
-        //save model into file
     }
+    
     func getMedicaments() -> String {
         return self.medicaments
     }
     
-    
     func getWeight() -> Double {
         return self.weight
     }
+    
     func getHeight() -> Double {
         return self.height
     }
+    
     func getBloodType() -> String {
         return self.bloodType
     }
+    
     func getBiologicalSex() -> String {
         return self.sex
     }
     
     func readData() {
+        
         if Storage.fileExists("Diagnoses.json", in: .documents) == true {
             let temp = Storage.retrieve("Diagnoses.json", from: .documents, as: BasicMedInfo.self)
             self.diseases = temp.diseases
@@ -85,13 +89,16 @@ public class BasicMedInfo: Codable {
             self.height = temp.height
             self.bloodType = temp.bloodType
             self.sex = temp.sex
-            
+        } else {
+            return
         }
     }
     
     func writeData() {
+        
         Storage.store(self, to: .documents, as: "Diagnoses.json")
     }
+    
     private func getSexAndBloodType() throws -> (biologicalSex: HKBiologicalSex,
         bloodType: HKBloodType) {
             let healthKitStore = HKHealthStore()
@@ -123,8 +130,10 @@ public class BasicMedInfo: Codable {
                 if let error = error {
                     print(error)
                 }
+                
                 return
             }
+            
             let weightInKilograms = sample.quantity.doubleValue(for: HKUnit.gramUnit(with: .kilo))
             self.weight = weightInKilograms
         }
@@ -134,8 +143,10 @@ public class BasicMedInfo: Codable {
                 if let error = error {
                     print(error)
                 }
+                
                 return
             }
+            
             let heightInMeters = sample.quantity.doubleValue(for: HKUnit.meter()) * 100
             self.height = heightInMeters
         }
@@ -143,16 +154,14 @@ public class BasicMedInfo: Codable {
     
     private func getMostRecentSample(for sampleType: HKSampleType,
                              completion: @escaping (HKQuantitySample?, Error?) -> Swift.Void) {
-        //1. Use HKQuery to load the most recent samples.
+        
         let mostRecentPredicate = HKQuery.predicateForSamples(withStart: Date.distantPast,
                                                               end: Date(),
                                                               options: .strictEndDate)
         
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate,
                                               ascending: false)
-        
         let limit = 1
-        
         let sampleQuery = HKSampleQuery(sampleType: sampleType,
                                         predicate: mostRecentPredicate,
                                         limit: limit,

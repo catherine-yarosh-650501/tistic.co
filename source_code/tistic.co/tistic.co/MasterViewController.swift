@@ -9,12 +9,9 @@
 import UIKit
 
 class MasterViewController: UITabBarController {
-
-    let person = Person.getInstance()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        super.viewDidLoad()
     }
-    
 }

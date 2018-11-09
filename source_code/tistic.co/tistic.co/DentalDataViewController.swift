@@ -9,63 +9,16 @@
 import UIKit
 import Foundation
 
-class DentalDataViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,  UITextFieldDelegate {
+class DentalDataViewController: UIViewController {
     
     var upperJaw : [(Int, String)] = Array()
     var lowerJaw : [(Int, String)] = Array()
-    
     weak var person: Person?
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var jawImage: UIImageView!
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let text = textField.text else { return true }
-        let newLength = text.characters.count + string.characters.count - range.length
-        return newLength <= 2
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.segmentControl.selectedSegmentIndex == 0 {
-            return upperJaw.count
-        } else {
-            return lowerJaw.count
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "dentalDescription", for: indexPath) as! DentalTableViewCell
-        
-        if self.segmentControl.selectedSegmentIndex == 0 {
-            cell.number.text = String(upperJaw[indexPath.row].0)
-            cell.dentDescription.text = upperJaw[indexPath.row].1
-            
-        } else {
-            cell.number.text = String(lowerJaw[indexPath.row].0)
-            cell.dentDescription.text = lowerJaw[indexPath.row].1
-        }
-        return cell
-    }
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            if self.segmentControl.selectedSegmentIndex == 0 {
-                self.upperJaw.remove(at: indexPath.row)
-                self.person?.dentalData.setUpperJawInfo(tuples: self.upperJaw)
-                self.person?.dentalData.writeData()
-            } else {
-                self.lowerJaw.remove(at: indexPath.row)
-                self.person?.dentalData.setLowerJawInfo(tuples: self.lowerJaw)
-                self.person?.dentalData.writeData()
-            }
-            DispatchQueue.main.async {
-                tableView.reloadData()
-            }
-        }
-    }
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        if tableView.isEditing {
-            return .delete
-        }
-        return .none
-    }
     @IBAction func addButtonPushed(_ sender: Any) {
         
         let addController = UIAlertController(title: "Adding a new record", message: "Please, input number of tooth and description of the problem", preferredStyle: .alert)
@@ -111,10 +64,6 @@ class DentalDataViewController: UIViewController, UITableViewDelegate, UITableVi
         self.present(addController, animated: true, completion: nil)
     }
     
-    @IBOutlet weak var addButton: UIBarButtonItem!
-
-    @IBOutlet weak var segmentControl: UISegmentedControl!
-    
     @IBAction func segmentControllerChanged(_ sender: Any) {
         switch segmentControl.selectedSegmentIndex {
         case 0:
@@ -131,15 +80,10 @@ class DentalDataViewController: UIViewController, UITableViewDelegate, UITableVi
             jawImage.image = nil
         }
     }
-    
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var jawImage: UIImageView!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tabBarVC = tabBarController as! MasterViewController
-        person = tabBarVC.person
+        self.person = Person.instance
         jawImage.image = UIImage(named: "upper_with_nums")
         let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(toggleEditing))
         editButton.tintColor = UIColor(red:0.47, green:0.69, blue:0.44, alpha:1.0)
@@ -151,7 +95,6 @@ class DentalDataViewController: UIViewController, UITableViewDelegate, UITableVi
         
         self.upperJaw = self.person!.dentalData.getUpperJawInfo()
         self.lowerJaw = self.person!.dentalData.getLowerJawInfo()
-    
     }
    
     @objc private func toggleEditing() {
@@ -167,6 +110,7 @@ class DentalDataViewController: UIViewController, UITableViewDelegate, UITableVi
         self.tableView.setEditing(!self.tableView.isEditing, animated: true)
         navigationItem.rightBarButtonItem?.title = self.tableView.isEditing ? "Save" : "Edit"
     }
+    
     private func contains(array:[(Int, String)], value: Int) -> Bool {
         
         for (arrayValue, _) in array {
@@ -175,5 +119,68 @@ class DentalDataViewController: UIViewController, UITableViewDelegate, UITableVi
             }
         }
         return false
+    }
+}
+
+extension DentalDataViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "dentalDescription", for: indexPath) as! DentalTableViewCell
+        
+        if self.segmentControl.selectedSegmentIndex == 0 {
+            cell.number.text = String(upperJaw[indexPath.row].0)
+            cell.dentDescription.text = upperJaw[indexPath.row].1
+        } else {
+            cell.number.text = String(lowerJaw[indexPath.row].0)
+            cell.dentDescription.text = lowerJaw[indexPath.row].1
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if self.segmentControl.selectedSegmentIndex == 0 {
+                self.upperJaw.remove(at: indexPath.row)
+                self.person?.dentalData.setUpperJawInfo(tuples: self.upperJaw)
+                self.person?.dentalData.writeData()
+            } else {
+                self.lowerJaw.remove(at: indexPath.row)
+                self.person?.dentalData.setLowerJawInfo(tuples: self.lowerJaw)
+                self.person?.dentalData.writeData()
+            }
+            DispatchQueue.main.async {
+                tableView.reloadData()
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        if tableView.isEditing {
+            return .delete
+        }
+        return .none
+    }
+}
+
+extension DentalDataViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if self.segmentControl.selectedSegmentIndex == 0 {
+            return upperJaw.count
+        } else {
+            return lowerJaw.count
+        }
+    }
+}
+
+extension DentalDataViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        guard let text = textField.text else { return true }
+        let newLength = text.characters.count + string.characters.count - range.length
+        return newLength <= 2
     }
 }

@@ -13,9 +13,7 @@ import Contacts
 
 class Person {
     
-    static func getInstance() -> Person {
-        return Person()
-    }
+    static let instance = Person()
     
     private var image: Data
     private var name: String
@@ -25,16 +23,11 @@ class Person {
     var dentalData: DentalInfo
     
     private init() {
-        //получить информацию о владельце телефона
-        //поиск по контактам
-        //фоточку и фамилию
-        //затем дернуть функцию чтения из hk  рост вес дата рождения группа крови пол
         
         self.image = Data()
         self.name = "none"
         self.surname = "none"
         self.birthday = "none"
-        
         self.basicInfo = BasicMedInfo()
         self.dentalData = DentalInfo()
         do {
@@ -46,8 +39,8 @@ class Person {
             if my.imageData != nil {
                 self.image = my.imageData!
                 self.surname = my.familyName
-                    }
-        }catch let error {
+            }
+        } catch let error {
             print(error)
         }
     }
@@ -55,48 +48,49 @@ class Person {
     func getImage() -> Data {
         return self.image
     }
+    
     func getName() -> String {
         return self.name
     }
+    
     func getSurname() -> String {
         return self.surname
     }
+    
     func getBirthday() -> String {
         return self.birthday
-
     }
+    
     func getDentalInfo() -> [Int: String] {
-        //generate concatenated dict
         return [0 : "none"]
     }
+    
     func getAge() throws -> String {
-            
-            let healthKitStore = HKHealthStore()
-            do {
-                let birthdayComponents = try healthKitStore.dateOfBirthComponents()
-            
-                let today = Date()
-                let calendar = Calendar.current
-                let todayDateComponents = calendar.dateComponents([.year],
+        
+        let healthKitStore = HKHealthStore()
+        do {
+            let birthdayComponents = try healthKitStore.dateOfBirthComponents()
+            let today = Date()
+            let calendar = Calendar.current
+            let todayDateComponents = calendar.dateComponents([.year],
                                                                   from: today)
-                let thisYear = todayDateComponents.year!
-                let age = thisYear - birthdayComponents.year!
-                
-                var unwrappedAge = String()
-                
-                unwrappedAge.append(String(birthdayComponents.day!))
-                unwrappedAge.append("/")
-                unwrappedAge.append(String(birthdayComponents.month!))
-                unwrappedAge.append("/")
-                unwrappedAge.append(String(birthdayComponents.year!))
-                unwrappedAge.append(" (")
-                unwrappedAge.append(String(age))
-                unwrappedAge.append(" years old)")
-                
-                return unwrappedAge
+            let thisYear = todayDateComponents.year!
+            let age = thisYear - birthdayComponents.year!
+            var unwrappedAge = String()
+            unwrappedAge.append(String(birthdayComponents.day!))
+            unwrappedAge.append("/")
+            unwrappedAge.append(String(birthdayComponents.month!))
+            unwrappedAge.append("/")
+            unwrappedAge.append(String(birthdayComponents.year!))
+            unwrappedAge.append(" (")
+            unwrappedAge.append(String(age))
+            unwrappedAge.append(" years old)")
+            return unwrappedAge
             }
     }
+    
     func matches(for regex: String, in text: String) -> [String] {
+        
         do {
             let regex = try NSRegularExpression(pattern: regex)
             let results = regex.matches(in: text,
@@ -111,11 +105,10 @@ class Person {
     }
     
     func searchContact(searchString: String) -> [CNContact] {
-        //Fetch
+    
         let contactStore: CNContactStore = CNContactStore()
         var contacts: [CNContact] = [CNContact]()
         let fetchRequest: CNContactFetchRequest = CNContactFetchRequest(keysToFetch: [CNContactVCardSerialization.descriptorForRequiredKeys()])
-        
         do {
             try contactStore.enumerateContacts(with: fetchRequest, usingBlock: {
                 contact, _ in
@@ -124,10 +117,7 @@ class Person {
         } catch {
             print("Get contacts \(error)")
         }
-        
-        //Search
         var resultArray: [CNContact] = [CNContact]()
-        
         for item in contacts {
             if item.givenName == searchString {
                 resultArray.append(item)
@@ -135,7 +125,6 @@ class Person {
         }
         let withoutDuplicates: [CNContact] = [CNContact](Set(resultArray))
         return withoutDuplicates
-        
     }
 }
 

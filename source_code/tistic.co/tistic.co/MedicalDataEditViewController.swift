@@ -26,6 +26,7 @@ class MedicalDataEditViewController: UIViewController {
     }
 
     @IBAction func doneButtonPressed(_ sender: Any) {
+        
         person?.basicInfo.setAllergy(text: self.allergyTextView.text)
         person?.basicInfo.setDiseases(text: self.diseasesTextView.text)
         person?.basicInfo.setMedicaments(text: self.medicamentsTextView.text)
@@ -35,6 +36,7 @@ class MedicalDataEditViewController: UIViewController {
     }
 
     @IBAction func openHealthAppTapped(_ sender: Any) {
+        
         if let appURL = URL(string: "x-apple-health://") {
             let canOpen = UIApplication.shared.canOpenURL(appURL)
             if  canOpen == true {
@@ -56,12 +58,12 @@ class MedicalDataEditViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         self.birthdayLabel.text = "Birthday: " + (person?.getBirthday())!
         self.personPhoto.image = UIImage(data: (person?.getImage())!)
         self.nameLabel.text = person?.getName()
         self.surnameLabel.text = person?.getSurname()
         self.sexLabel.text = "Sex: " + (person?.basicInfo.getBiologicalSex())!
-        
         self.diseasesTextView.text = (person?.basicInfo.getDiseases())!
         self.allergyTextView.text = (person?.basicInfo.getAllergy())!
         self.medicamentsTextView.text = (person?.basicInfo.getMedicaments())!
