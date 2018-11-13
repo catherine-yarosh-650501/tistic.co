@@ -9,7 +9,6 @@
 import UIKit
 
 class MedicalDataEditViewController: UIViewController {
-    
     @IBOutlet weak var personPhoto: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
@@ -18,7 +17,6 @@ class MedicalDataEditViewController: UIViewController {
     @IBOutlet weak var diseasesTextView: UITextView!
     @IBOutlet weak var medicamentsTextView: UITextView!
     @IBOutlet weak var allergyTextView: UITextView!
-    
     weak var person: Person?
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
@@ -26,7 +24,6 @@ class MedicalDataEditViewController: UIViewController {
     }
 
     @IBAction func doneButtonPressed(_ sender: Any) {
-        
         person?.basicInfo.setAllergy(text: self.allergyTextView.text)
         person?.basicInfo.setDiseases(text: self.diseasesTextView.text)
         person?.basicInfo.setMedicaments(text: self.medicamentsTextView.text)
@@ -36,7 +33,6 @@ class MedicalDataEditViewController: UIViewController {
     }
 
     @IBAction func openHealthAppTapped(_ sender: Any) {
-        
         if let appURL = URL(string: "x-apple-health://") {
             let canOpen = UIApplication.shared.canOpenURL(appURL)
             if  canOpen == true {
@@ -58,7 +54,6 @@ class MedicalDataEditViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         self.birthdayLabel.text = "Birthday: " + (person?.getBirthday())!
         self.personPhoto.image = UIImage(data: (person?.getImage())!)
         self.nameLabel.text = person?.getName()

@@ -9,9 +9,7 @@
 import UIKit
 
 class MasterViewController: UITabBarController {
-    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
     }
 }

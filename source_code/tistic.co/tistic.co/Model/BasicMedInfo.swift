@@ -10,7 +10,6 @@ import Foundation
 import HealthKit
 
 public class BasicMedInfo: Codable {
-    
     private var diseases: String
     private var allergy: String
     private var medicaments: String
@@ -79,7 +78,6 @@ public class BasicMedInfo: Codable {
     }
     
     func readData() {
-        
         if Storage.fileExists("Diagnoses.json", in: .documents) == true {
             let temp = Storage.retrieve("Diagnoses.json", from: .documents, as: BasicMedInfo.self)
             self.diseases = temp.diseases
@@ -95,7 +93,6 @@ public class BasicMedInfo: Codable {
     }
     
     func writeData() {
-        
         Storage.store(self, to: .documents, as: "Diagnoses.json")
     }
     
@@ -114,7 +111,6 @@ public class BasicMedInfo: Codable {
     }
 
     private func getHKWeightAndHeight() {
-       
         guard let weightSampleType = HKSampleType.quantityType(forIdentifier: .bodyMass) else {
             print("Body Mass Sample Type is no longer available in HealthKit")
             return
@@ -130,7 +126,6 @@ public class BasicMedInfo: Codable {
                 if let error = error {
                     print(error)
                 }
-                
                 return
             }
             
@@ -146,7 +141,7 @@ public class BasicMedInfo: Codable {
                 
                 return
             }
-            
+
             let heightInMeters = sample.quantity.doubleValue(for: HKUnit.meter()) * 100
             self.height = heightInMeters
         }
@@ -154,7 +149,6 @@ public class BasicMedInfo: Codable {
     
     private func getMostRecentSample(for sampleType: HKSampleType,
                              completion: @escaping (HKQuantitySample?, Error?) -> Swift.Void) {
-        
         let mostRecentPredicate = HKQuery.predicateForSamples(withStart: Date.distantPast,
                                                               end: Date(),
                                                               options: .strictEndDate)

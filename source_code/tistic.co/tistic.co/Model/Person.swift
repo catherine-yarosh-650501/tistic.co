@@ -12,9 +12,7 @@ import HealthKit
 import Contacts
 
 class Person {
-    
     static let instance = Person()
-    
     private var image: Data
     private var name: String
     private var surname: String
@@ -23,7 +21,6 @@ class Person {
     var dentalData: DentalInfo
     
     private init() {
-        
         self.image = Data()
         self.name = "none"
         self.surname = "none"
@@ -62,11 +59,10 @@ class Person {
     }
     
     func getDentalInfo() -> [Int: String] {
-        return [0 : "none"]
+        return [0: "none"]
     }
     
     func getAge() throws -> String {
-        
         let healthKitStore = HKHealthStore()
         do {
             let birthdayComponents = try healthKitStore.dateOfBirthComponents()
@@ -90,7 +86,6 @@ class Person {
     }
     
     func matches(for regex: String, in text: String) -> [String] {
-        
         do {
             let regex = try NSRegularExpression(pattern: regex)
             let results = regex.matches(in: text,
@@ -105,7 +100,6 @@ class Person {
     }
     
     func searchContact(searchString: String) -> [CNContact] {
-    
         let contactStore: CNContactStore = CNContactStore()
         var contacts: [CNContact] = [CNContact]()
         let fetchRequest: CNContactFetchRequest = CNContactFetchRequest(keysToFetch: [CNContactVCardSerialization.descriptorForRequiredKeys()])

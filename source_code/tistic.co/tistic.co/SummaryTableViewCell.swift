@@ -8,15 +8,11 @@
 
 import UIKit
 
-
 class SummaryTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var number: UILabel!
     @IBOutlet weak var toothDescription: UILabel!
     
     override func awakeFromNib() {
-        
         super.awakeFromNib()
-        
     }
 }

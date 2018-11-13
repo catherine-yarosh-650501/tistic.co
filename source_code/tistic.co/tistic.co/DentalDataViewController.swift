@@ -10,9 +10,8 @@ import UIKit
 import Foundation
 
 class DentalDataViewController: UIViewController {
-    
-    var upperJaw : [(Int, String)] = Array()
-    var lowerJaw : [(Int, String)] = Array()
+    var upperJaw: [(Int, String)] = Array()
+    var lowerJaw: [(Int, String)] = Array()
     weak var person: Person?
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var jawImage: UIImageView!
@@ -20,7 +19,6 @@ class DentalDataViewController: UIViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
     @IBAction func addButtonPushed(_ sender: Any) {
-        
         let addController = UIAlertController(title: "Adding a new record", message: "Please, input number of tooth and description of the problem", preferredStyle: .alert)
         addController.addTextField { (numTextField) in
             numTextField.placeholder = "Num"
@@ -112,7 +110,6 @@ class DentalDataViewController: UIViewController {
     }
     
     private func contains(array:[(Int, String)], value: Int) -> Bool {
-        
         for (arrayValue, _) in array {
             if arrayValue == value {
                 return true
@@ -123,9 +120,7 @@ class DentalDataViewController: UIViewController {
 }
 
 extension DentalDataViewController: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "dentalDescription", for: indexPath) as! DentalTableViewCell
         
         if self.segmentControl.selectedSegmentIndex == 0 {
@@ -164,9 +159,7 @@ extension DentalDataViewController: UITableViewDelegate {
 }
 
 extension DentalDataViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         if self.segmentControl.selectedSegmentIndex == 0 {
             return upperJaw.count
         } else {
@@ -176,9 +169,7 @@ extension DentalDataViewController: UITableViewDataSource {
 }
 
 extension DentalDataViewController: UITextFieldDelegate {
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
         guard let text = textField.text else { return true }
         let newLength = text.characters.count + string.characters.count - range.length
         return newLength <= 2

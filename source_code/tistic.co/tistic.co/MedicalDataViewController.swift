@@ -9,9 +9,7 @@
 import UIKit
 import HealthKit
 
-
 class MedicalDataViewController: UIViewController {
-    
     @IBOutlet weak var personPhoto: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
@@ -26,12 +24,11 @@ class MedicalDataViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var editButton: UIBarButtonItem!
     
-    var summaryJawInfo:[(Int, String)] = Array()
+    var summaryJawInfo: [(Int, String)] = Array()
     weak var person: Person?
     let healthKitStore = HKHealthStore()
     
     override func viewWillAppear(_ animated: Bool) {
-        
         self.birthdayLabel.text = "Birthday: " + person!.getBirthday()
         self.personPhoto.image = UIImage(data: person!.getImage())
         self.nameLabel.text = person!.getName()
@@ -52,7 +49,6 @@ class MedicalDataViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         person = Person.instance
         self.personPhoto.contentMode = .scaleAspectFill
@@ -65,7 +61,6 @@ class MedicalDataViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "editSegue" {
             let rootViewController = segue.destination as? UINavigationController
             let editViewController = rootViewController?.viewControllers.first as! MedicalDataEditViewController
@@ -75,19 +70,15 @@ class MedicalDataViewController: UIViewController {
 }
 
 extension MedicalDataViewController: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dentalSummary", for: indexPath) as! SummaryTableViewCell
         cell.toothDescription.text = summaryJawInfo[indexPath.row].1
         cell.number.text = String(summaryJawInfo[indexPath.row].0)
         return cell
-        
     }
-    
 }
 
 extension MedicalDataViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return summaryJawInfo.count
     }

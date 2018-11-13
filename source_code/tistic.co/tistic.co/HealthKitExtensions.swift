@@ -9,7 +9,6 @@
 import HealthKit
 
 extension HKBloodType {
-    
     var stringRepresentation: String {
         switch self {
         case .notSet: return "Unknown"
@@ -26,7 +25,6 @@ extension HKBloodType {
 }
 
 extension HKBiologicalSex {
-    
     var stringRepresentation: String {
         switch self {
         case .notSet: return "Unknown"

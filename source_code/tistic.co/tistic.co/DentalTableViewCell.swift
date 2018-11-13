@@ -9,13 +9,10 @@
 import UIKit
 
 class DentalTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var number: UILabel!
-    
     @IBOutlet weak var dentDescription: UILabel!
     
     override func awakeFromNib() {
-        
         super.awakeFromNib()
     }
 }
