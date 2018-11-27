@@ -13,3 +13,7 @@ Platform: iOS 12 <br>
 
 
 2. [Source code](source_code)<br>
+
+3. [Testing](testing)<br>
+3.1 [Test Plan](testing/test_plan.md)<br>
+3.2 [Test Results](testing/test_results.md)<br>
