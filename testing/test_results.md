@@ -20,3 +20,10 @@
 | 18 | Convenience for users with poor eyesight|<br>1. Launch the app "tistic.co"</br><br>2. Check sufficiency of font size of functional elements</br> <br>3. Turn off color representation on test device </br> <br>4. Check the distinguishability of functional elements with the background</br>| Font size of functional elements should be 12 pt and functional elements should be distinguishable with the background | Font size is 12 pt. Functional elements are distinguishable | passed |
 | 19 | Security checking| <br> 1. Logout from Apple ID user's account </br> <br>2. Launch the app "tistic.co"</br> | Application should alert user following: application usage is only available after Apple ID account login | Application alerts user following: application usage is only available after Apple ID account login | passed |
 | 20 | Working without Internet connection |<br>1. Turn of Internet connection on the test device </br><br>2. Launch the app "tistic.co</br> | Application should work without Internet connection | Application works without Internet connection | passed |
+
+###Conclusion</br>
+
+<br>Functional requirements were implemented, but were founded 2 bugs. </br>
+Passed 15 test (15/17).</br></br>
+Non-functional requirements were fully implemented and testing was successful.</br>
+Passed 3 test (3/3).</br>
